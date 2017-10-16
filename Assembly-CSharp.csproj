@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FieldMove.cs" />
      <Compile Include="Assets\Music\Music.cs" />
      <Compile Include="Assets\Object\Ring.cs" />
      <Compile Include="Assets\Plane\MovePlane.cs" />

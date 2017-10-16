@@ -296,7 +296,11 @@ public class Music : MonoBehaviour
 	/// Change Current Music.
 	/// </summary>
 	/// <param name="MusicName">name of the GameObject that include Music</param>
-	public static void Play(string musicName, string sectionName = "") { MusicList_.Find((Music m) => m.name == musicName).PlayStart(sectionName); }
+	public static void Play(string musicName, string sectionName = "") {
+        //Debug.Log(MusicList_[0].name);
+        MusicList_.Find((Music m) => m.name == musicName).PlayStart(sectionName); 
+        //MusicList_[0].PlayStart(sectionName);
+    }
 	/// <summary>
 	/// Quantize to musical time.
 	/// </summary>
