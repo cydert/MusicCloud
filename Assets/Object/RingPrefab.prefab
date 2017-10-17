@@ -66,8 +66,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1953113319045318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 13.57, z: 139.5}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 0, y: 13.57, z: 500}
+  m_LocalScale: {x: 20, y: 20, z: 5}
   m_Children:
   - {fileID: 4733374269800980}
   m_Father: {fileID: 0}
@@ -125,7 +125,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 118
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &65117571367262782
 BoxCollider:
@@ -150,4 +150,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190248fd3ed922141b67219ad9a3015f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  airCraft: {fileID: 0}
+  airCraft: {fileID: 100010, guid: 147d826ca4c5a834a9dfe5db390c47f4, type: 2}
+  debugPrint: 0
