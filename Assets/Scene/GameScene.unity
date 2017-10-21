@@ -9184,7 +9184,7 @@ MonoBehaviour:
     LoopType: 0
   EntryPointSample: 0
   DebugText: {fileID: 0}
-  DebugPrint: 0
+  DebugPrint: 1
   CreateSectionClips: 0
 --- !u!1 &1252834400
 GameObject:

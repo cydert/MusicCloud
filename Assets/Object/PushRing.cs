@@ -9,12 +9,12 @@ public class PushRing : MonoBehaviour {
     public GameObject ringPosition;
     private int cnt = 0;    //現在出力したリング数
     private int nextTiming = -1;
-    int barSpace = 8; //何bar前からリングを出す
+    int barSpace = 3; //何bar前からリングを出す
 
 	// Use this for initialization
 	void Start () {
         //Debug
-        startMusic(MUSIC.Melt);
+        startMusic(MUSIC.FlightSound);
 
 	}
 	
