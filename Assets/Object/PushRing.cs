@@ -2,29 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PushRing : MonoBehaviour {
+public class PushRing : MonoBehaviour
+{
 
     string[] rhythmText;  //タイミング, 座標
     public GameObject ring; //インスタンス化
     public GameObject ringPosition;
+    private PushRingPosition pushRingScript;
     private int cnt = 0;    //現在出力したリング数
     private int nextTiming = -1;
     int barSpace = 3; //何bar前からリングを出す
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         //Debug
-        startMusic(MUSIC.FlightSound);
+        pushRingScript = ringPosition.GetComponent<PushRingPosition>();
+        startMusic(MUSIC.FlightSound, 1);
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if(nextTiming != -1 && rhythmText != null)
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //指定したタイミングになったらリング出力
+        if (nextTiming != -1 && rhythmText != null)
         {
-            if(nextTiming - Music.MusicalTimeBar <= barSpace)
+            if (nextTiming - Music.MusicalTimeBar <= barSpace)
             {
-                Debug.Log("put:"+Music.MusicalTimeBar);
                 put();
             }
         }
@@ -34,14 +39,13 @@ public class PushRing : MonoBehaviour {
 
     private void put()
     {
-        string[] infoAr = rhythmText[cnt].Split(',');   //分割
+        string[] infoAr = rhythmText[cnt].Split(',');   //分割(次のタイミング,座標)
         GameObject newRing = Instantiate(ring, ringPosition.transform.position, Quaternion.identity);   //インスタンス化
-        Ring ringCom = newRing.GetComponent<Ring>();
-        ringCom.Init(int.Parse(infoAr[0]), int.Parse(infoAr[1]), int.Parse(infoAr[2])); //座標セット
+        Ring ringCom = newRing.GetComponent<Ring>();    //Ringのスクリプト
+        ringCom.Init(int.Parse(infoAr[0]), int.Parse(infoAr[1]), int.Parse(infoAr[2])); //座標セット(移動開始)
         cnt++;
         if (rhythmText.Length > cnt)    //次のリング
         {
-            Debug.Log("nx");
             nextTiming = int.Parse(rhythmText[cnt].Split(',')[0]);
         }
         else
@@ -54,20 +58,21 @@ public class PushRing : MonoBehaviour {
     }
 
     //指定した音楽でスタート
-    void startMusic(MUSIC musicKind)
+    void startMusic(MUSIC musicKind, int numLebel)
     {
+        Music.Play(musicKind.ToString());
+        rhythmText = ReadFile.readFile("MusicTempo/" + musicKind.ToString() + numLebel + ".txt");    //タイミング取得
+        nextTiming = int.Parse(rhythmText[cnt].Split(',')[0]);  //初回タイミング
+
+        pushRingScript.ResetPosition(); //出現場所のリセット
         switch (musicKind)
         {
             case MUSIC.Melt:
-                Music.Play("Melt");
-                rhythmText = new string[] { "5,0,0", "20,1,0", "50,5,1" };
-                nextTiming = int.Parse(rhythmText[cnt].Split(',')[0]);
-                //TODO readFile
+                barSpace = 3;
                 break;
             case MUSIC.FlightSound:
-                Music.Play("FlightSound");
-                rhythmText = new string[] { "5,0,0", "20,1,0", "50,1,1" };
-                nextTiming = int.Parse(rhythmText[cnt].Split(',')[0]);
+                barSpace = 2;
+                pushRingScript.SetLength(1500);
                 break;
         }
 
