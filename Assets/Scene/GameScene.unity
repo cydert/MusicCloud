@@ -150,6 +150,52 @@ Transform:
   m_Father: {fileID: 1126319319}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &90886111
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4656919284714290, guid: 6860a39514cc38f4a8111d9382061c4c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656919284714290, guid: 6860a39514cc38f4a8111d9382061c4c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656919284714290, guid: 6860a39514cc38f4a8111d9382061c4c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656919284714290, guid: 6860a39514cc38f4a8111d9382061c4c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656919284714290, guid: 6860a39514cc38f4a8111d9382061c4c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656919284714290, guid: 6860a39514cc38f4a8111d9382061c4c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656919284714290, guid: 6860a39514cc38f4a8111d9382061c4c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656919284714290, guid: 6860a39514cc38f4a8111d9382061c4c, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538216673685902, guid: 6860a39514cc38f4a8111d9382061c4c, type: 2}
+      propertyPath: m_TagString
+      value: Fire
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6860a39514cc38f4a8111d9382061c4c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &153256794
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +247,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153256794}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &178169924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 178169925}
+  m_Layer: 8
+  m_Name: bulletPosR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &178169925
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178169924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 0.8, z: 3.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1126319319}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &191648437
 GameObject:
   m_ObjectHideFlags: 0
@@ -4056,7 +4130,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -4097,7 +4171,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -7088,7 +7162,7 @@ ParticleSystemRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -8006,7 +8080,7 @@ MonoBehaviour:
     LoopType: 0
   EntryPointSample: 0
   DebugText: {fileID: 0}
-  DebugPrint: 1
+  DebugPrint: 0
   CreateSectionClips: 0
 --- !u!1 &836475182
 GameObject:
@@ -8546,6 +8620,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1012164803}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1025930398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1025930399}
+  m_Layer: 8
+  m_Name: bulletPosL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1025930399
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1025930398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5, y: 0.8, z: 3.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1126319319}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1042662436
 GameObject:
   m_ObjectHideFlags: 0
@@ -8788,6 +8890,7 @@ GameObject:
   - component: {fileID: 1126319313}
   - component: {fileID: 1126319312}
   - component: {fileID: 1126319311}
+  - component: {fileID: 1126319320}
   m_Layer: 8
   m_Name: AircraftJet
   m_TagString: Player
@@ -8972,9 +9075,25 @@ Transform:
   - {fileID: 2130457666}
   - {fileID: 12823701}
   - {fileID: 1042662441}
+  - {fileID: 178169925}
+  - {fileID: 1025930399}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1126319320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1126319310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e6c0542b3c2514290c9da639adbfb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletIns: {fileID: 1538216673685902, guid: 6860a39514cc38f4a8111d9382061c4c, type: 2}
+  bulletPosR: {fileID: 178169924}
+  bulletPosL: {fileID: 1025930398}
 --- !u!1 &1193398688 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 1d72109994bfd074eb3816ecaf2488bb, type: 3}
@@ -9009,6 +9128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaa7d9ec7a3c50d48857303142ed81c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigid: {fileID: 0}
+  angleSpeed: {x: 0, y: 10, z: 0}
 --- !u!1 &1223414097
 GameObject:
   m_ObjectHideFlags: 0
@@ -9177,13 +9298,13 @@ MonoBehaviour:
   - Name: 
     UnitPerBeat: 4
     UnitPerBar: 16
-    Tempo: 120
+    Tempo: 180
     StartBar: 0
     StartTimeSamples: 0
     LoopType: 0
   EntryPointSample: 0
   DebugText: {fileID: 0}
-  DebugPrint: 1
+  DebugPrint: 0
   CreateSectionClips: 0
 --- !u!1 &1252834400
 GameObject:
@@ -9319,7 +9440,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 0
+  randomSeed: -19278034
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -9487,7 +9608,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -9528,7 +9649,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -12513,7 +12634,7 @@ ParticleSystemRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -16452,6 +16573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaa7d9ec7a3c50d48857303142ed81c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigid: {fileID: 0}
+  angleSpeed: {x: 0, y: 10, z: 0}
 --- !u!1 &1788272766 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1718599391650940, guid: 37c552ae68eca274197431d74fe2b790,
