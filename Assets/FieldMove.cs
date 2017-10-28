@@ -9,7 +9,7 @@ public class FieldMove : MonoBehaviour {
 
     int fieldLength = 1000;
     private long boader;
-    private int boaderOff = 100;
+    private int boaderOff = 500;
     private int cnt = 0;
     // Use this for initialization
     void Start () {
@@ -28,6 +28,17 @@ public class FieldMove : MonoBehaviour {
             }
             boader += fieldLength;
             cnt++;
+            
+        }else if(player.transform.position.z-1 < boader-fieldLength + boaderOff)
+        {
+            cnt--;
+            if (cnt % 2 == 0) field1.transform.position = new Vector3(field1.transform.position.x, field1.transform.position.y, boader - fieldLength*2);
+            else
+            {
+                field2.transform.position = new Vector3(field2.transform.position.x, field2.transform.position.y, boader - fieldLength*2);
+
+            }
+            boader -= fieldLength;
             
         }
 	}

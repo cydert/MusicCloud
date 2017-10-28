@@ -17,8 +17,8 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         [SerializeField] private float m_AutoTurnPitch = 0.5f;        // How much the aeroplane automatically pitches when in a banked turn.
         [SerializeField] private float m_AutoRollLevel = 0.2f;        // How much the aeroplane tries to level when not rolling.
         [SerializeField] private float m_AutoPitchLevel = 0.2f;       // How much the aeroplane tries to level when not pitching.
-        [SerializeField] private float m_AirBrakesEffect = 3f;        // How much the air brakes effect the drag.
-        [SerializeField] private float m_ThrottleChangeSpeed = 0.3f;  // The speed with which the throttle changes.
+        [SerializeField] private float m_AirBrakesEffect = 1f;        // How much the air brakes effect the drag.
+        [SerializeField] private float m_ThrottleChangeSpeed = 0.1f;  // The speed with which the throttle changes.
         [SerializeField] private float m_DragIncreaseFactor = 0.001f; // how much drag should increase with speed.
 
         public float Altitude { get; private set; }                     // The aeroplane's height above the ground.
