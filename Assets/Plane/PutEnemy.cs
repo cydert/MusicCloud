@@ -7,12 +7,12 @@ public class PutEnemy : MonoBehaviour {
     public GameObject enemy;
 
     private bool play = false;
-    private float spaceTiming = 4;
+    private float spaceTiming = 8;
     private float length = 1000;    //敵の出現距離
     private float nowTiming = 0;
 	// Use this for initialization
 	void Start () {
-        //putEnemy();
+
 	}
 	
 	// Update is called once per frame

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class bulletSc : MonoBehaviour {
-    private float interval = 2;   //指定時間
+    private float interval = 5;   //指定時間
     private float time = 0;   //何秒立ったか
 	// Use this for initialization
 	void Start () {
