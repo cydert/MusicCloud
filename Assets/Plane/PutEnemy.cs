@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySc : MonoBehaviour {
+public class PutEnemy : MonoBehaviour {
     public GameObject plane;
     public GameObject enemy;
 
