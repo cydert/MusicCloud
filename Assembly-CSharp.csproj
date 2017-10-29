@@ -59,9 +59,11 @@
      <Compile Include="Assets\Object\PushRing.cs" />
      <Compile Include="Assets\Object\PushRingPosition.cs" />
      <Compile Include="Assets\Object\Ring.cs" />
+     <Compile Include="Assets\Plane\EnemySc.cs" />
      <Compile Include="Assets\Plane\FireSc.cs" />
      <Compile Include="Assets\Plane\planeInfoGui.cs" />
      <Compile Include="Assets\Plane\PutEnemy.cs" />
+     <Compile Include="Assets\Timer.cs" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Aircraft\AircraftGuidelines.txt" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
