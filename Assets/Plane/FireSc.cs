@@ -18,18 +18,28 @@ public class FireSc : MonoBehaviour {
 	void Update () {
         if (Input.GetButton("Fire1"))
         {
-            Quaternion rote = Quaternion.Euler(90.0f, 0.0f, 0.0f);
-            GameObject bullet = Instantiate(bulletIns, bulletPosR.transform.position, rote);   //インスタンス化
-            Rigidbody buRigid = bullet.GetComponent<Rigidbody>();    //発射
-            buRigid.AddForce(transform.forward*speed, ForceMode.Impulse);
+            FireR();
         }
 
         if (Input.GetButton("Fire2"))
         {
-            Quaternion rote = Quaternion.Euler(90.0f, 0.0f, 0.0f);
-            GameObject bullet = Instantiate(bulletIns, bulletPosL.transform.position, rote);   //インスタンス化
-            Rigidbody buRigid = bullet.GetComponent<Rigidbody>();    //発射
-            buRigid.AddForce(transform.forward * speed, ForceMode.Impulse);
+            FireL();
         }
+    }
+
+    public void FireR()
+    {
+        Quaternion rote = Quaternion.Euler(90.0f, 0.0f, 0.0f);
+        GameObject bullet = Instantiate(bulletIns, bulletPosR.transform.position, rote);   //インスタンス化
+        Rigidbody buRigid = bullet.GetComponent<Rigidbody>();    //発射
+        buRigid.AddForce(transform.forward * speed, ForceMode.Impulse);
+    }
+
+    public void FireL()
+    {
+        Quaternion rote = Quaternion.Euler(90.0f, 0.0f, 0.0f);
+        GameObject bullet = Instantiate(bulletIns, bulletPosL.transform.position, rote);   //インスタンス化
+        Rigidbody buRigid = bullet.GetComponent<Rigidbody>();    //発射
+        buRigid.AddForce(transform.forward * speed, ForceMode.Impulse);
     }
 }
