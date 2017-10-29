@@ -9034,6 +9034,7 @@ MonoBehaviour:
   bulletIns: {fileID: 1538216673685902, guid: 6860a39514cc38f4a8111d9382061c4c, type: 2}
   bulletPosR: {fileID: 178169924}
   bulletPosL: {fileID: 1025930398}
+  enemyMode: 0
 --- !u!114 &1126319321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20475,6 +20476,7 @@ GameObject:
   - component: {fileID: 1990138200}
   - component: {fileID: 1990138201}
   - component: {fileID: 1990138202}
+  - component: {fileID: 1990138203}
   m_Layer: 0
   m_Name: GameInfo
   m_TagString: Untagged
@@ -20546,6 +20548,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plane: {fileID: 1126319310}
   enemy: {fileID: 100026, guid: 243cde157155b1c47b0a7607b8c10348, type: 2}
+--- !u!114 &1990138203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1990138197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc55faacb992c05438b2600ee9b80ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2035225655
 GameObject:
   m_ObjectHideFlags: 0
