@@ -26,6 +26,10 @@ public class FireSc : MonoBehaviour {
             FireL();
         }
     }
+    public void setSpeed(int speed)
+    {
+        this.speed = speed;
+    }
 
     public void FireR()
     {
