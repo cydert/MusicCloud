@@ -9,6 +9,7 @@ public class Ring : MonoBehaviour {
     AeroplaneController planeInfo;
     Rigidbody rigid;
     bool init = false;
+    public bool hit = false;
 
     float goalTime;
 
@@ -46,8 +47,8 @@ public class Ring : MonoBehaviour {
 
             if (debugPrint)
                 Debug.Log("L:" + length + " T:" + toTime + " FS:" + planeInfo.ForwardSpeed + " RS:" + ringSpeed+ "PUT;"+ (-ringSpeed + planeInfo.ForwardSpeed) * Time.deltaTime);
-
-            transform.position += new Vector3(0, 0, (-ringSpeed+planeInfo.ForwardSpeed)*Time.deltaTime);
+            if(ringSpeed != 0)
+                transform.position += new Vector3(0, 0, (-ringSpeed+planeInfo.ForwardSpeed)*Time.deltaTime);
             //rigid.velocity = new Vector3(0, 0, -ringSpeed);  //速度設定
              //rigid.AddForce(new Vector3(0, 0, ringSpeed), ForceMode.Force);
         }
