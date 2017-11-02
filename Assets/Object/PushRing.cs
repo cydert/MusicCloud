@@ -40,7 +40,8 @@ public class PushRing : MonoBehaviour
     private void put()
     {
         string[] infoAr = rhythmText[cnt].Split(',');   //分割(次のタイミング,座標)
-        GameObject newRing = Instantiate(ring, ringPosition.transform.position, Quaternion.identity);   //インスタンス化
+        Quaternion rote = Quaternion.Euler(-90.0f, 0.0f, 0.0f);
+        GameObject newRing = Instantiate(ring, ringPosition.transform.position, rote);   //インスタンス化
         Ring ringCom = newRing.GetComponent<Ring>();    //Ringのスクリプト
         ringCom.Init(int.Parse(infoAr[0]), int.Parse(infoAr[1]), int.Parse(infoAr[2])); //座標セット(移動開始)
         cnt++;

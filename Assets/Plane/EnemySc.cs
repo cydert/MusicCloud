@@ -59,6 +59,7 @@ public class EnemySc : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
+
         if(col.tag == "Fire")
         {
             hp--;
