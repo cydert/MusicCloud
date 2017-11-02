@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\FieldMove.cs" />
      <Compile Include="Assets\GameInfoSc.cs" />
+     <Compile Include="Assets\MainSc.cs" />
      <Compile Include="Assets\Music\Music.cs" />
      <Compile Include="Assets\Music\ReadFile.cs" />
      <Compile Include="Assets\Object\bulletSc.cs" />
