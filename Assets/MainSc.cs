@@ -8,7 +8,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class MainSc : MonoBehaviour {
     public GUIStyle infoStyle;
 
-    private string[] musicList = { "Flight Sound", "メルト" };
+    private PushRing.MUSIC[] musicList = { PushRing.MUSIC.FlightSound, PushRing.MUSIC.Melt};
     private int selectNum = 0;
     private int nowLevel = 1;
     private int maxLevel = 3;
@@ -62,10 +62,12 @@ public class MainSc : MonoBehaviour {
                 isSelectDif = true;
             }else if (isSelectDif)
             {
+                //起動開始
                 isSelectDif = false;
                 isLoading = true;
+                MusicInfo.level = nowLevel;
+                MusicInfo.musicName = musicList[selectNum];
                 SceneManager.LoadSceneAsync("GameScene");
-
             }
 
         }
@@ -88,9 +90,20 @@ public class MainSc : MonoBehaviour {
         string[] screenres = UnityStats.screenRes.Split('x');
         int width = int.Parse(screenres[0]);
         int height = int.Parse(screenres[1]);
+        string soundName="";
+        switch (musicList[selectNum])
+        {
+            case PushRing.MUSIC.Melt:
+                soundName = "メルト";
+                break;
+            case PushRing.MUSIC.FlightSound:
+                soundName = "Flight Sound";
+                break;
+        }
+
         GUI.Label(new Rect(width / 2 - 80, height / 3-50 , 80, 120), "Sound Cloud", infoStyle);
         if(isSelectMusic)
-            GUI.Label(new Rect(width / 2 - 80, height / 2+100 , 80, 120), "曲選択\n<ー  "+musicList[selectNum] +"  ー>", infoStyle);
+            GUI.Label(new Rect(width / 2 - 80, height / 2+100 , 80, 120), "曲選択\n<ー  "+soundName +"  ー>", infoStyle);
         if (isSelectDif)
             GUI.Label(new Rect(width / 2 - 80, height / 2 + 100, 80, 120), "難易度選択\n<ー  " + nowLevel + "  ー>", infoStyle);
         if(isLoading)

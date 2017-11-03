@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PutEnemy : MonoBehaviour {
     public GameObject plane;
@@ -18,7 +19,7 @@ public class PutEnemy : MonoBehaviour {
 	void Start () {
         enemyAr = new GameObject[maxEnemy];
         play = true;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {

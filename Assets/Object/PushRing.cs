@@ -18,7 +18,8 @@ public class PushRing : MonoBehaviour
     {
         //Debug
         pushRingScript = ringPosition.GetComponent<PushRingPosition>();
-        startMusic(MUSIC.FlightSound, 1);
+
+        startMusic(MusicInfo.musicName, MusicInfo.level);
 
     }
 
@@ -53,13 +54,13 @@ public class PushRing : MonoBehaviour
             nextTiming = -1;
     }
 
-    enum MUSIC
+    public enum MUSIC
     {
         Melt, FlightSound
     }
 
     //指定した音楽でスタート
-    void startMusic(MUSIC musicKind, int numLebel)
+    public void startMusic(MUSIC musicKind, int numLebel)
     {
         Music.Play(musicKind.ToString());
         rhythmText = ReadFile.readFile("MusicTempo/" + musicKind.ToString() + numLebel + ".txt");    //タイミング取得
