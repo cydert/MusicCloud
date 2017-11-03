@@ -20,6 +20,18 @@ public class PushRing : MonoBehaviour
         pushRingScript = ringPosition.GetComponent<PushRingPosition>();
 
         startMusic(MusicInfo.musicName, MusicInfo.level);
+        switch (MusicInfo.level)
+        {
+            case 1:
+                planeInfoGui.hp = 30;
+                break;
+            case 2:
+                planeInfoGui.hp = 20;
+                break;
+            case 3:
+                planeInfoGui.hp = 10;
+                break;
+        }
 
     }
 

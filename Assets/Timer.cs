@@ -59,7 +59,6 @@ public class Timer : MonoBehaviour {
         return false;
     }
 
-    //指定時間になったか
     public bool IsStart()
     {
         return isStart;
@@ -81,5 +80,10 @@ public class Timer : MonoBehaviour {
     public void Stop()
     {
         isStart = false;
+    }
+
+    public void Del()
+    {
+        Destroy(this);
     }
 }
